@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "275816093013",
+    "project_id": "myevent-ae119",
+    "storage_bucket": "myevent-ae119.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275816093013:android:ebb0c65662eb1d3ff28bdc",
+        "android_client_info": {
+          "package_name": "com.app.my_event"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1-lcZFkX22zD8dBb9JUi0EI46NPV3ja8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
