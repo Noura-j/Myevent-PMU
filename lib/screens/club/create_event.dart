@@ -44,11 +44,11 @@ class _CreateEventState extends State<CreateEvent> {
   TextEditingController organizerNameController = TextEditingController();
   TextEditingController eventTitleController = TextEditingController();
   TextEditingController numberOfParticipantsController =
-      TextEditingController();
+  TextEditingController();
   TextEditingController inChargeFullNameController = TextEditingController();
   TextEditingController inChargePmuIdController = TextEditingController();
   TextEditingController inChargeContactNumberController =
-      TextEditingController();
+  TextEditingController();
   TextEditingController activityTypeController = TextEditingController();
   TextEditingController activityDescriptionController = TextEditingController();
   TextEditingController eventBudgetController = TextEditingController();
@@ -83,7 +83,7 @@ class _CreateEventState extends State<CreateEvent> {
 
   Future<void> _getImage() async {
     final XFile? image =
-        await ImagePicker().pickImage(source: ImageSource.gallery);
+    await ImagePicker().pickImage(source: ImageSource.gallery);
     setState(() {
       _posterImage = image != null ? File(image.path) : null;
     });
@@ -443,10 +443,10 @@ class _CreateEventState extends State<CreateEvent> {
                   items: _venues
                       .map(
                         (venue) => DropdownMenuItem(
-                          value: venue,
-                          child: venue.text.make(),
-                        ),
-                      )
+                      value: venue,
+                      child: venue.text.make(),
+                    ),
+                  )
                       .toList(),
                   onChanged: (value) {
                     setState(() {
@@ -596,7 +596,6 @@ class _CreateEventState extends State<CreateEvent> {
                   10.widthBox,
                   'Unavailable'.text.make(),
                 ].hStack(alignment: MainAxisAlignment.start),
-                unavailableDates.toString().text.make(),
                 Divider(
                   color: Vx.hexToColor('#FFA451'),
                 ),
@@ -606,31 +605,31 @@ class _CreateEventState extends State<CreateEvent> {
                   height: 200,
                   child: _posterImage == null
                       ? ElevatedButton(
-                          onPressed: () {
-                            //pick image of the poster
-                            _getImage();
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Vx.hexToColor('#F37022'),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                          ),
-                          child: Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  CupertinoIcons.upload_circle,
-                                  color: Color(0xFF042745),
-                                  size: 80,
-                                ).centered().p8(),
-                                'Upload Poster'.text.white.make(),
-                              ],
-                            ),
-                          ),
-                        )
+                    onPressed: () {
+                      //pick image of the poster
+                      _getImage();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Vx.hexToColor('#F37022'),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    child: Center(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(
+                            CupertinoIcons.upload_circle,
+                            color: Color(0xFF042745),
+                            size: 80,
+                          ).centered().p8(),
+                          'Upload Poster'.text.white.make(),
+                        ],
+                      ),
+                    ),
+                  )
                       : Image.file(_posterImage!),
                 ).p8(),
                 'Location'.text.xl.make(),
@@ -638,6 +637,7 @@ class _CreateEventState extends State<CreateEvent> {
                   width: double.infinity,
                   height: 200,
                   child: ElevatedButton(
+
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Vx.hexToColor('#F37022'),
@@ -694,13 +694,14 @@ class _CreateEventState extends State<CreateEvent> {
                         ],
                         // manually specify the colors to be used
                         createParticlePath:
-                            drawStar, // define a custom shape/path.
+                        drawStar, // define a custom shape/path.
                       ),
                     ),
                     Container(
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
+                          _controllerCenter.play();
                           createEvent();
                         },
                         style: ElevatedButton.styleFrom(

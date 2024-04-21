@@ -65,7 +65,7 @@ class _WelcomeState extends State<Welcome> {
 
               final filteredEvents = snapshot.data!.docs.where((document) {
                 Map<String, dynamic> data =
-                    document.data() as Map<String, dynamic>;
+                document.data() as Map<String, dynamic>;
                 final searchQuery = _searchController.text.toLowerCase();
                 final eventTitle = data['eventTitle'].toString().toLowerCase();
                 return data['status'] == 'approved' &&
@@ -77,7 +77,7 @@ class _WelcomeState extends State<Welcome> {
                 child: Row(
                   children: filteredEvents.map((DocumentSnapshot document) {
                     Map<String, dynamic> data =
-                        document.data() as Map<String, dynamic>;
+                    document.data() as Map<String, dynamic>;
                     print(data['poster']);
                     return InkWell(
                       onTap: () {
@@ -98,7 +98,9 @@ class _WelcomeState extends State<Welcome> {
                               ),
                             ),
                             Positioned(
-                              top: 180,
+                              bottom: 0,
+                              right: 0,
+                              left: 0,
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 0.6,
                                 decoration: BoxDecoration(
@@ -116,10 +118,10 @@ class _WelcomeState extends State<Welcome> {
                                         .make(),
                                     Text(
                                       'Location: ${data['selectedVenue']}\n'
-                                      'Date: ${data['dateRange'].toString().split(',')[0]}\n'
-                                      'Start Time: ${data['eventStartTime']}',
+                                          'Date: ${data['dateRange'].toString().split(',')[0]}\n'
+                                          'Start Time: ${data['eventStartTime']}',
                                       style:
-                                          const TextStyle(color: Colors.white),
+                                      const TextStyle(color: Colors.white),
                                     ),
                                   ],
                                 ).p8(),

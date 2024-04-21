@@ -55,16 +55,7 @@ class _ActivityState extends State<Activity> {
                               color: Colors.white,
                             ),
                           ),
-                    trailing: data['status'] == 'approved'
-                        ? TextButton(
-                            onPressed: () {
-                              Get.toNamed('/add_students', arguments: {
-                                'document': document.id,
-                              });
-                            },
-                            child: 'Add Students'.text.white.make(),
-                          )
-                        : null,
+
                   ).p8()
                 : Container();
           }).toList(),

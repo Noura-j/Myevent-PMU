@@ -34,7 +34,7 @@ class _WelcomeState extends State<Welcome> {
             username = userData['club_name'];
             if (userData['profile'] == '' || userData['profile'] == null) {
               profilePic =
-                  'https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png';
+              'https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png';
             } else {
               profilePic = userData['profile'];
             }
@@ -62,7 +62,7 @@ class _WelcomeState extends State<Welcome> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 if (username != null)
-                  Expanded(child: 'Hi ${username!}Club!'.text.xl3.make().p8())
+                  Expanded(child: 'Hi! ${username!}'.text.xl3.make().p8())
                 else
                   CircularProgressIndicator().centered(),
                 Container(
@@ -76,8 +76,8 @@ class _WelcomeState extends State<Welcome> {
                       image: profilePic != null
                           ? NetworkImage(profilePic!)
                           : NetworkImage(
-                              'https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png',
-                            ),
+                        'https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png',
+                      ),
                     ),
                   ),
                 ),

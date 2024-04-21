@@ -80,10 +80,10 @@ class _MyAppState extends State<MyApp> {
           name: '/reject_reason',
           page: () => const RejectReason(),
         ),
-        GetPage(
-          name: '/add_students',
-          page: () => const AddStudents(),
-        ),
+        //GetPage(
+          //name: '/add_students',
+          //page: () => const AddStudents(),
+        //),
         GetPage(
           name: '/attendance',
           page: () => const Attendance(),),
